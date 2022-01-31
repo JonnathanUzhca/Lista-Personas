@@ -7,7 +7,7 @@ import { Persona } from '../persona.model';
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
-  providers :[LoggingService]
+ 
 })
 export class FormularioComponent  {
 
@@ -21,7 +21,7 @@ export class FormularioComponent  {
     agregarPersona(NombreInput:HTMLInputElement, ApellidoInput:HTMLInputElement){
       let persona1 = new Persona(NombreInput.value, ApellidoInput.value);
       //this.personas.push(persona1);
-      this.logginService.enviarMensajeAConsola("Enviamos Persona : "+persona1.apellido + persona1.nombre);
+      this.logginService.enviarMensajeAConsola("Enviamos Persona  con Nombre de : "+persona1.nombre +" y apellido "+ persona1.apellido);
       this.personaCreada.emit(persona1);
     }
 
