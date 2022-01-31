@@ -1,0 +1,33 @@
+<div class="container">
+  <form class="row">
+    <div class="group col-md-2">
+      <label for="nombre" class="sr-only">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        class="form-control"
+        #NombreInput
+      />
+    </div>
+
+    <div class="group col-md-2">
+      <label for="aplellido" class="sr-only"> Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="Apellido"
+        class="form-control"
+        #ApellidoInput
+      />
+    </div>
+
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona(NombreInput,ApellidoInput)">
+        Agregar
+      </button>
+    </div>
+  </form>
+</div>
