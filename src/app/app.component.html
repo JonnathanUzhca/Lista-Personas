@@ -23,7 +23,8 @@
         id="nombreCarro"
         placeholder="Nombre Carro"
         class="form-control"
-        [(ngModel)]="nombreCarroInput"
+        #nombreCarroInput
+
       />
     </div>
     <div class="group col-md-2">
@@ -34,7 +35,7 @@
         id="marcaCarro"
         placeholder="marcaCarro"
         class="form-control"
-        [(ngModel)]="marcaCarroInput"
+        #marcaCarroInput
       />
     </div>
     <div class="group col-md-2">
@@ -45,7 +46,7 @@
         id="anioCarro"
         placeholder="anioCarro"
         class="form-control"
-        [(ngModel)]="anioCarroInput"
+        #anioCarroInput
       />
     </div>
     <div class="col">

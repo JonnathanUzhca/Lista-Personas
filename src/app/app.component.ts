@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { Carro } from './carro.modelo';
 import { Persona } from './persona.model';
@@ -27,12 +27,15 @@ export class AppComponent {
       new Carro('cx5','mazda','2019')
     ];
 
-    nombreCarroInput:string ='';
-    marcaCarroInput:string ='';
-    anioCarroInput:string='';
+    //nombreCarroInput:string ='';
+    //marcaCarroInput:string ='';
+    //anioCarroInput:string='';
+    @ViewChild('nombreCarroInput') nombreCarroInput:ElementRef;
+    @ViewChild('marcaCarroInput') marcaCarroInput: ElementRef;
+    @ViewChild('anioCarroInput') anioCarroInput : ElementRef;
 
     agregarCarro(){
-      let carro1 = new Carro(this.nombreCarroInput, this.marcaCarroInput, this.anioCarroInput)
+      let carro1 = new Carro(this.nombreCarroInput.nativeElement.value, this.marcaCarroInput.nativeElement.value, this.anioCarroInput.nativeElement.value);
       this.carros.push(carro1);
 
     }
